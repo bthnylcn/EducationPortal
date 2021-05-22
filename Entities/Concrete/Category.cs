@@ -1,13 +1,13 @@
-﻿using System;
+﻿using Core.Entities;
+using System;
 using System.Collections.Generic;
 using System.Text;
-using Entities.Abstract;
 
 namespace Entities.Concrete
 {
     public class Category:IEntity
     {
-        public int Id { get; set; }
-        public String Name { get; set; }
+        public int CategoryId { get; set; }
+        public String CategoryName { get; set; }
     }
 }
