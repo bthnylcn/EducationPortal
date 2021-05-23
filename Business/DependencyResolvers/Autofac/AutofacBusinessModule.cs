@@ -20,9 +20,17 @@ namespace Business.DependencyResolvers.Autofac
     {
         protected override void Load(ContainerBuilder builder)
         {
+            builder.RegisterType<StudentManager>().As<IStudentService>().SingleInstance();
+            builder.RegisterType<EfStudentDal>().As<IStudentDal>().SingleInstance();
 
-            builder.RegisterType<ProductManager>().As<IProductService>().SingleInstance();
-            builder.RegisterType<EfProductDal>().As<IProductDal>().SingleInstance();
+            builder.RegisterType<InstructorManager>().As<IInstructorService>().SingleInstance();
+            builder.RegisterType<EfInstructorDal>().As<IInstructorDal>().SingleInstance();
+
+            builder.RegisterType<CourseManager>().As<ICourseService>().SingleInstance();
+            builder.RegisterType<EfCourseDal>().As<ICourseDal>().SingleInstance();
+
+            builder.RegisterType<ContentManager>().As<IContentService>().SingleInstance();
+            builder.RegisterType<EfContentDal>().As<IContentDal>().SingleInstance();
 
             builder.RegisterType<CategoryManager>().As<ICategoryService>().SingleInstance();
             builder.RegisterType<EfCategoryDal>().As<ICategoryDal>().SingleInstance();

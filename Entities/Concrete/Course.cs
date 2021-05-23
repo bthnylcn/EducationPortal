@@ -7,13 +7,13 @@ namespace Entities.Concrete
 {
     public class Course:IEntity
     {
-        public int CourseId { get; set; }
+        public int Id { get; set; }
         public int CategoryId { get; set; }
         public int InstructorId { get; set; }
-        public String CourseName { get; set; }
+        public String Name { get; set; }
         public Decimal UnitPrice { get; set; }
-        public int CourseQuota { get; set; }
-        public int CourseLength { get; set; }
+        public int Quota { get; set; }
+        public int Length { get; set; }
         public String Description { get; set; }
     }
 }

@@ -3,9 +3,7 @@ using Business.Constants;
 using Core.Entities.Concrete;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Business.Concrete
 {
@@ -16,21 +14,21 @@ namespace Business.Concrete
         {
             _userDal = userDal;
         }
-       
         public IResult Add(User user)
         {
             _userDal.Add(user);
-            return new SuccessResult(Messages.UserRegistered);
+            return new SuccessResult(Messages.UserAdded);
         }
 
         public IResult Delete(User user)
         {
             _userDal.Delete(user);
-            return new SuccessResult(Messages.UserAlreadyExists);
+            return new SuccessResult(Messages.UserDeleted);
         }
+
         public IDataResult<List<User>> GetAll()
         {
-            return new SuccessDataResult<List<User>>(_userDal.GetAll(), Messages.ProductsListed);
+            return new SuccessDataResult<List<User>>(_userDal.GetAll(), Messages.UsersListed);
         }
 
         public IDataResult<User> GetById(int userId)
@@ -40,7 +38,7 @@ namespace Business.Concrete
             {
                 return new ErrorDataResult<User>((result), Messages.UserNotFound);
             }
-            return new SuccessDataResult<User>((result), Messages.ProductsListed);
+            return new SuccessDataResult<User>((result), Messages.UsersListed);
         }
 
         public IDataResult<User> GetByMail(string email)
@@ -52,12 +50,12 @@ namespace Business.Concrete
         {
             return new SuccessDataResult<List<OperationClaim>>(_userDal.GetClaims(user));
         }
+
         public IResult Update(User user)
         {
             _userDal.Update(user);
-            return new SuccessResult(Messages.UserRegistered);
+            return new SuccessResult(Messages.UserUpdated);
         }
-
-        
     }
+
 }

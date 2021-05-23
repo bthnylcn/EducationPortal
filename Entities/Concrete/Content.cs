@@ -7,8 +7,8 @@ namespace Entities.Concrete
 {
     public class Content:IEntity
     {
-        public int ContentId { get; set; }
+        public int Id { get; set; }
         public int CourseId { get; set; }
-        public String ContentPath { get; set; }
+        public String FilePath { get; set; }
     }
 }

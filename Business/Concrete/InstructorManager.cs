@@ -40,7 +40,7 @@ namespace Business.Concrete
 
         public IDataResult<List<Instructor>> GetById(int Id)
         {
-            return new SuccessDataResult<List<Instructor>>(_instructorDal.GetAll(c => c.InstructorId == Id), Messages.CustomersListed);
+            return new SuccessDataResult<List<Instructor>>(_instructorDal.GetAll(c => c.Id == Id), Messages.CustomersListed);
         }
         
     }

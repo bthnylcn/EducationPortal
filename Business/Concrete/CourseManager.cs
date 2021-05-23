@@ -41,7 +41,7 @@ namespace Business.Concrete
 
         public IDataResult<List<Course>> GetById(int Id)
         {
-            return new SuccessDataResult<List<Course>>(_courseDal.GetAll(c => c.CourseId == Id), Messages.CustomersListed);
+            return new SuccessDataResult<List<Course>>(_courseDal.GetAll(c => c.Id == Id), Messages.CustomersListed);
         }
     }
 }

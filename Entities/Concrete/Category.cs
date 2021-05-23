@@ -7,7 +7,7 @@ namespace Entities.Concrete
 {
     public class Category:IEntity
     {
-        public int CategoryId { get; set; }
-        public String CategoryName { get; set; }
+        public int Id { get; set; }
+        public String Name { get; set; }
     }
 }

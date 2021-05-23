@@ -11,7 +11,7 @@ namespace DataAccess.Concrete.EntityFramework
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=DESKTOP-K8GBU7S\SQLEXPRESS;Database=ReCapDb;Trusted_Connection=True");
+            optionsBuilder.UseSqlServer(@"Server=DESKTOP-K8GBU7S\SQLEXPRESS;Database=EducationPortal;Trusted_Connection=True");
         }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Content> Contents { get; set; }
