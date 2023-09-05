@@ -17,7 +17,7 @@ namespace Business.ValidationRules.FluentValidation
             RuleFor(u => u.LastName).MinimumLength(2);
             RuleFor(u => u.Email).NotEmpty().WithMessage(Messages.CanNotBeBlank);
             RuleFor(u => u.Email).EmailAddress();
-
+            //test
 
         }
 
