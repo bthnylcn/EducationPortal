@@ -18,7 +18,7 @@ namespace Business.ValidationRules.FluentValidation
             RuleFor(u => u.Email).NotEmpty().WithMessage(Messages.CanNotBeBlank);
             RuleFor(u => u.Email).EmailAddress();
             //RuleFor(u => u.Email).();
-
+            //test
 
         }
 
